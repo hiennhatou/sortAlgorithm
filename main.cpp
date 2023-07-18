@@ -22,10 +22,11 @@ int main() {
 
     File.close();
 
-    /* Uncomment to use sorts */
+    /* Uncomment one of specific sorts to use sorts */
 //    interchangeSort(arr, n);
-//    selectionSort(arr, n);
+//    insertionSort(arr, n);
 //    mergeSort(arr, 0, n - 1);
+//    selectionSort(arr, n);
 
     showAll(arr, n);
 

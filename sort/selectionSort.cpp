@@ -1,13 +1,16 @@
 void selectionSort(int arr[], int n) {
-    for (int i = 1; i < n; i++) {
-        int o = i - 1;
-        int current = i;
-        while (o >= 0 && arr[o] > arr[current]) {
-            int temp = arr[o];
-            arr[o] = arr[current];
-            arr[current] = temp;
-            current--;
-            o--;
+    for (int i = 0; i < n - 1; i++) {
+        int min = arr[i];
+        int position = i;
+        for (int o = i + 1; o < n; o++) {
+            if (arr[o] < min) {
+                min = arr[o];
+                position = o;
+            }
         }
+
+        int temp = arr[i];
+        arr[i] = arr[position];
+        arr[position] = temp;
     }
 }
